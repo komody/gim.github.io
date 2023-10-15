@@ -1,0 +1,261 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background: white;
+  /* ハンバーガーメニューのナビゲーションの設定 */
+  /*
+  ハンバーガーメニューがクリックされた際に、JavaScriptで#hamburger-navigationにactiveクラスを追加して、
+  メニューを表示させる。
+  */
+  /* ハンバーガ―メニューの見た目部分の設定 */
+  /* ハンバーガーメニューの線の設定（初期の三本線の状態） */
+  /* 1本目の線の位置 */
+  /* 2本目の線の位置 */
+  /* 3本目の線の位置 */
+  /* ハンバーガーメニューの線の設定（クリックされてメニューが表示されている際の、バツ印の状態） */
+  /* 1本目の線を-45度回転 */
+  /* 2本目と3本目は重ねて45度回転 */
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.header #hamburger-navigation {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+.header #hamburger-navigation .navi-background {
+  transform: translateX(-150px);
+}
+.header #hamburger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.header #hamburger-navigation.active .navi-background {
+  display: block;
+  position: fixed;
+  z-index: 50;
+  width: 300px;
+  background-color: black;
+  padding: 60px 25px;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(0px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.header #hamburger-navigation.active .sections {
+  margin-bottom: 60px;
+  border-top: solid 1px #fff;
+}
+.header #hamburger-navigation.active .sections li {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: solid 1px #fff;
+}
+.header #hamburger-navigation.active .sections a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+}
+.header #hamburger-navigation.active .sns li {
+  padding: 5px 0;
+}
+.header .hamburger-menu {
+  display: block;
+  top: -10px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+}
+.header .hamburger-menu span {
+  width: 50px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 15px;
+  transition: 0.4s ease-in-out;
+}
+.header .hamburger-menu span:nth-child(1) {
+  top: 24px;
+}
+.header .hamburger-menu span:nth-child(2) {
+  top: 40px;
+}
+.header .hamburger-menu span:nth-child(3) {
+  top: 56px;
+}
+.header .hamburger-menu.active span:nth-child(1) {
+  top: 40px;
+  left: 15px;
+  background: #fff;
+  transform: rotate(-315deg);
+}
+.header .hamburger-menu.active span:nth-child(2),
+.header .hamburger-menu.active span:nth-child(3) {
+  top: 40px;
+  background: #fff;
+  transform: rotate(315deg);
+}
+
+.video video {
+  width: 100%;
+}
+
+#pickup {
+  padding: 100px 0 50px 0;
+}
+#pickup .pickup-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+#pickup .swiper {
+  width: 100%;
+}
+#pickup .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pickup .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#feature {
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
+}
+#feature h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#feature .grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#feature .grid .item {
+  box-shadow: 0 0 8px 4px #ccc;
+}
+#feature .grid .item .fadein {
+  aspect-ratio: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+#feature .grid .item-content {
+  padding: 30px;
+}
+#feature .grid .item-title {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+#feature .grid .item-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#feature .grid .item-date {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+#contact {
+  background: black;
+  padding: 50px 0;
+}
+#contact h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+#contact .contact-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+#contact .contact-info {
+  width: 45%;
+}
+#contact .contact-info p {
+  color: white;
+  margin-bottom: 30px;
+}
+#contact .contact-form {
+  width: 45%;
+  color: white;
+}
+#contact .contact-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#contact .contact-form .send input {
+  width: 200px;
+  color: white;
+  background-color: black;
+  border: solid 1px white;
+}
+
+.footer {
+  color: white;
+  background: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .video video {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .header .site-title {
+    width: 200px;
+  }
+  .header #hamburger-navigation.active .navi-background {
+    width: 220px;
+  }
+  #contact .contact-main {
+    flex-direction: column;
+  }
+  #contact .contact-info, #contact .contact-form {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
