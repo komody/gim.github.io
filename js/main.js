@@ -26,10 +26,10 @@ hamburgerMenuSections.forEach((hamburgerMenuSection) => {
   });
 });
 
-navi.addEventListener("click", function () {
-  hamburgerMenu.classList.toggle("active");
-  navi.classList.toggle('active');
-});
+// navi.addEventListener("click", function () {
+//   hamburgerMenu.classList.toggle("active");
+//   navi.classList.toggle('active');
+// });
 
 // hamburgerMenuSections.forEach((menuClose) => {
 //   menuClose.addEventListener("click", function () {
